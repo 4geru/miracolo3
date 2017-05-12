@@ -1,0 +1,13 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  title: MyString
+  text: MyText
+  limit: 2017-05-11 12:03:20
+  main_obj_id: 1
+
+two:
+  title: MyString
+  text: MyText
+  limit: 2017-05-11 12:03:20
+  main_obj_id: 1

@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Miracolo</title>
+    <%= csrf_meta_tags %>
+
+    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+
+    <meta charset=utf8>
+    <meta name="viewport" content="width=device-width,initial-scale=1.0,user-scable=no">
+    <title>PETIET</title>
+    <link href="css/test1.css" rel="stylesheet">
+    <!-- BootstrapのCSS読み込み -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <!-- jQuery読み込み -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    <!-- BootstrapのJS読み込み -->
+    <script src="js/bootstrap.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    <script>
+      $(document).ready(function(){
+        // 画面幅800px基準でzoomをセット
+        $("html").css("zoom", $(window).width() / 1366);
+        $(window).bind({
+          "resize load orientationchange" : function(event) {
+            var zoom = $(window).width() / 1366;
+            $("html").css("zoom", zoom);
+          }
+        });
+      });
+    </script>
+
+  </head>
+
+  <body>
+    <%= yield %>
+  </body>
+</html>

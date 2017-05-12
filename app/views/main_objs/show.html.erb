@@ -1,0 +1,76 @@
+<body style="background:#e6e6e6;">
+<header>
+MIRACOLO
+</header>
+<div class="sidebar2">
+	<div class="time"></div>
+<div class="line"></div>
+</div>
+<div class="content">
+<div class="a"  ></div>
+<div class="b"  ></div>
+<div class="c"  ></div>
+<div class="d"  ></div>
+<div class="e"  id="trigger-overlay" type="button">
+  Title:<br>
+  <%= @main_obj.title %>
+</div>
+<div class="f"  ></div>
+<div class="g"  ></div>
+<div class="h"  ></div>
+<div class="i"  ></div>
+</div>
+<div class="sidebar">
+ <div class="menu1">Setting</div>
+    <div class="menu2">User</div>
+     <div class="menu3">Log out</div>
+</div>
+<div class="overlay overlay-door way" style="background: #cccccc;">
+			<button type="button" class="overlay-close">Close</button>
+
+			<nav>
+				<ul>
+					<li><p href="#" id="yume">
+            <strong>Title:</strong>
+            <%= @main_obj.title %>
+          </p></li>
+					<li><a href="#" class="detail">
+              <strong>Text:</strong>
+              <%= @main_obj.text %>
+          </a></li>
+					<li><p href="#" class="detail">
+              <strong>Limit:</strong>
+              <%= @main_obj.limit %>
+  </p></li>
+				</ul>
+			</nav>
+		</div>
+		<script src="js/classie.js"></script>
+		<script src="js/demo1.js"></script>
+  </body>
+<!-- -->
+
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Title:</strong>
+  <%= @main_obj.title %>
+</p>
+
+<p>
+  <strong>Text:</strong>
+  <%= @main_obj.text %>
+</p>
+
+<p>
+  <strong>Limit:</strong>
+  <%= @main_obj.limit %>
+</p>
+
+<p>
+  <strong>User:</strong>
+  <%= @main_obj.user_id %>
+</p>
+
+<%= link_to 'Edit', edit_main_obj_path(@main_obj) %> |
+<%= link_to 'Back', main_objs_path %>

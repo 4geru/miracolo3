@@ -1,0 +1,37 @@
+<%= form_for(sub_obj) do |f| %>
+  <% if sub_obj.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(sub_obj.errors.count, "error") %> prohibited this sub_obj from being saved:</h2>
+
+      <ul>
+      <% sub_obj.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :title %>
+    <%= f.text_field :title %>
+  </div>
+
+  <div class="field">
+    <%= f.label :text %>
+    <%= f.text_area :text %>
+  </div>
+
+  <div class="field">
+    <%= f.label :limit %>
+    <%= f.datetime_select :limit %>
+  </div>
+
+  <div class="field">
+    <%= f.label :main_obj_id %>
+    <%= f.number_field :main_obj_id %>
+  </div>
+
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

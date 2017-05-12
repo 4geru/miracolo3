@@ -1,0 +1,33 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Main Objs</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Title</th>
+      <th>Text</th>
+      <th>Limit</th>
+      <th>User</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @main_objs.each do |main_obj| %>
+      <tr>
+        <td><%= main_obj.title %></td>
+        <td><%= main_obj.text %></td>
+        <td><%= main_obj.limit %></td>
+        <td><%= main_obj.user_id %></td>
+        <td><%= link_to 'Show', main_obj %></td>
+        <td><%= link_to 'Edit', edit_main_obj_path(main_obj) %></td>
+        <td><%= link_to 'Destroy', main_obj, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Main Obj', new_main_obj_path %>

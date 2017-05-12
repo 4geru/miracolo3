@@ -1,0 +1,33 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Sub Objs</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Title</th>
+      <th>Text</th>
+      <th>Limit</th>
+      <th>Main obj</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @sub_objs.each do |sub_obj| %>
+      <tr>
+        <td><%= sub_obj.title %></td>
+        <td><%= sub_obj.text %></td>
+        <td><%= sub_obj.limit %></td>
+        <td><%= sub_obj.main_obj_id %></td>
+        <td><%= link_to 'Show', sub_obj %></td>
+        <td><%= link_to 'Edit', edit_sub_obj_path(sub_obj) %></td>
+        <td><%= link_to 'Destroy', sub_obj, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Sub Obj', new_sub_obj_path %>
