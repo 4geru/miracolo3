@@ -11,21 +11,25 @@
     </div>
   <% end %>
 
-  <div class="field">
-    <%= f.label :title %>
+<div class="field ">
+    
+    <%= f.label :目標を決めましょう %>
     <%= f.text_field :title %>
   </div>
 
   <div class="field">
-    <%= f.label :text %>
+    <%= f.label :具体的にすることを書いてください。 %>
     <%= f.text_area :text %>
   </div>
-
+ 
   <div class="field">
-    <%= f.label :limit %>
+    <%= f.label :期限を決めましょう。 %>
     <%= f.datetime_select :limit %>
   </div>
-
+  
+<div class="field">
+    <%= f.datetime_select :limit %>
+  </div>
   <div class="field">
     <%= f.label :user_id %>
     <%= f.number_field :user_id %>
