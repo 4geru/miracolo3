@@ -1,5 +1,6 @@
 class MainObjsController < ApplicationController
   before_action :set_main_obj, only: [:show, :edit, :update, :destroy]
+  before_action :authenticate_user!
 
   # GET /main_objs
   # GET /main_objs.json
@@ -25,10 +26,11 @@ class MainObjsController < ApplicationController
   # POST /main_objs.json
   def create
     @main_obj = MainObj.new(main_obj_params)
+    @main_obj.user_id = current_user.id
 
     respond_to do |format|
       if @main_obj.save
-        format.html { redirect_to @main_obj, notice: 'Main obj was successfully created.' }
+        format.html { redirect_to @main_obj, notice: 'Main object was successfully created.' }
         format.json { render :show, status: :created, location: @main_obj }
       else
         format.html { render :new }
@@ -42,7 +44,7 @@ class MainObjsController < ApplicationController
   def update
     respond_to do |format|
       if @main_obj.update(main_obj_params)
-        format.html { redirect_to @main_obj, notice: 'Main obj was successfully updated.' }
+        format.html { redirect_to @main_obj, notice: 'Main object was successfully updated.' }
         format.json { render :show, status: :ok, location: @main_obj }
       else
         format.html { render :edit }
@@ -56,7 +58,7 @@ class MainObjsController < ApplicationController
   def destroy
     @main_obj.destroy
     respond_to do |format|
-      format.html { redirect_to main_objs_url, notice: 'Main obj was successfully destroyed.' }
+      format.html { redirect_to main_objs_url, notice: 'Main object was successfully destroyed.' }
       format.json { head :no_content }
     end
   end

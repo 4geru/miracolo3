@@ -1,5 +1,6 @@
 class SubObjsController < ApplicationController
   before_action :set_sub_obj, only: [:show, :edit, :update, :destroy]
+  before_action :authenticate_user!
 
   # GET /sub_objs
   # GET /sub_objs.json
