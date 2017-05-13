@@ -1,7 +1,7 @@
 <%= form_for(main_obj) do |f| %>
   <% if main_obj.errors.any? %>
     <div id="error_explanation">
-      <h2><%= pluralize(main_obj.errors.count, "error") %> prohibited this main_obj from being saved:</h2>
+      <h2 ><%= pluralize(main_obj.errors.count, "error") %> prohibited this main_obj from being saved:</h2>
 
       <ul>
       <% main_obj.errors.full_messages.each do |message| %>
@@ -11,23 +11,23 @@
     </div>
   <% end %>
 
-<div class="field ">
+<div class="field " >
     
     <%= f.label :目標を決めましょう %>
     <%= f.text_field :title %>
   </div>
 
-  <div class="field">
+  <div class="field " >
     <%= f.label :具体的にすることを書いてください。 %>
     <%= f.text_area :text %>
   </div>
  
   <div class="field">
-    <%= f.label :期限を決めましょう。 %>
+    <%= f.label "期限を決めましょう。" %>
     <%= f.datetime_select :limit %>
   </div>
-  <!--<div class="field">
-    <!-- <%= f.label :user_id %> -->
+  <div class="field">
+    <%= f.label "ユーザー名" %> 
     <%= f.number_field :user_id %>
   </div>
 

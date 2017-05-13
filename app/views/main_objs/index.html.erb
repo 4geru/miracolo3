@@ -1,33 +1,38 @@
+<header >
+ MIRACOLO
+</header>
+
 <p id="notice"><%= notice %></p>
 
-<h1>Main Objs</h1>
-
+<h1 style="margin-left:50px;">夢</h1>
+<div class="col-xm-12 col-md-12 col-lg-8">
 <table>
-  <thead>
-    <tr>
-      <th>Title</th>
-      <th>Text</th>
-      <th>Limit</th>
-      <th>User</th>
-      <th colspan="3"></th>
-    </tr>
-  </thead>
-
   <tbody>
     <% @main_objs.each do |main_obj| %>
-      <tr>
-        <td><%= main_obj.title %></td>
-        <td><%= main_obj.text %></td>
-        <td><%= main_obj.limit %></td>
-        <td><%= main_obj.user_id %></td>
-        <td><%= link_to 'Show', main_obj %></td>
-        <td><%= link_to 'Edit', edit_main_obj_path(main_obj) %></td>
-        <td><%= link_to 'Destroy', main_obj, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+ <tr>
+  <ul class="user-list">
+  <li >
+   <div class="img4" >
+     <p style="font-size:30px; text-align:center; margin-top:60px;"><%= main_obj.title %></p>
+    </div>
+     <p><%= main_obj.text %>
+     <%= main_obj.limit %>
+        <%= main_obj.user_id %>
+        <%= link_to 'Show', main_obj %>
+       <%= link_to 'Edit', edit_main_obj_path(main_obj) %></p>
+      </li>
+  </ul>
+       
       </tr>
     <% end %>
   </tbody>
+  
 </table>
-
+</div>
 <br>
-
-<%= link_to 'New Main Obj', new_main_obj_path %>
+<div class="col-xm-12 col-md-12 col-lg-3">
+   <div class="menu1 "></div>
+    <div class="menu2 "></div>
+     <div class="menu3 "></div>
+</div>
+<%= link_to 'new', new_main_obj_path %>

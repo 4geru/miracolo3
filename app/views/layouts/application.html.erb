@@ -13,39 +13,16 @@
     <link href="css/test1.css" rel="stylesheet">
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
 
-<!-- Optional theme -->
+
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
 
-<!-- Latest compiled and minified JavaScript -->
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
-<<<<<<< HEAD
-    <!--
-=======
-    <!---------
->>>>>>> 49831528ffb447af5dc3c4c11b42ebc1807375f9
-    <script>
-      $(document).ready(function(){
-        // 画面幅800px基準でzoomをセット
-        $("html").css("zoom", $(window).width() / 1366);
-        $(window).bind({
-          "resize load orientationchange" : function(event) {
-            var zoom = $(window).width() / 1366;
-            $("html").css("zoom", zoom);
-          }
-        });
-      });
-    </script>
-<<<<<<< HEAD
--->
-=======
-------------------------->
->>>>>>> 49831528ffb447af5dc3c4c11b42ebc1807375f9
-  </head>
+</script>
 
   <body  style="background:#e6e6e6;">
 
     <%= yield %>
-    <p class="notice">notice</p>
+    <p id="notice">notice</p>
     <!-- または<p class="alert">alert</p> -->
   </body>
 </html>
