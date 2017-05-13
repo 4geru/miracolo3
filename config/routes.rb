@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  devise_for :users
   get 'site/top'
   root "site#top"
   resources :sub_objs
