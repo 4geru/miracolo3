@@ -1,4 +1,7 @@
 Rails.application.routes.draw do
+  get    'login'   => 'user_log#new'
+  post   'login'   => 'user_log#create'
+
   get 'site/top'
   root "site#top"
   resources :sub_objs

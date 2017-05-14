@@ -1,5 +1,14 @@
 class MainObjsController < ApplicationController
   before_action :set_main_obj, only: [:show, :edit, :update, :destroy]
+  before_action :login
+  def login
+    if session[:user_id].blank?
+      redirect_to user_log_
+      #user = User.create
+      #session[:user_id] = user.id
+    end
+    @user_id = session[:user_id]
+  end
 
   # GET /main_objs
   # GET /main_objs.json
@@ -24,7 +33,7 @@ class MainObjsController < ApplicationController
   # POST /main_objs
   # POST /main_objs.json
   def create
-    @main_obj = MainObj.new(main_obj_params)
+    @main_obj = current_user.main_objs.new(main_obj_params)
 
     respond_to do |format|
       if @main_obj.save
