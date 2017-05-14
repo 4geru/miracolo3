@@ -3,15 +3,6 @@ body{
   background:#e6e6e6;
 
 }
-header{
-width:1366px;
-height:60px;
-font-family: impact;
-background-color:white;
-font-size: 50px;
-color:#e5e5e5;
-text-align: center;
-}
 .content{
   width:900px;
   float:left;
@@ -1080,14 +1071,13 @@ border-radius: 20px;}
   animation: rumble 0.2s linear infinite;
 }
 .menu1{
-  width:250px;
+  width:320px;
   height:80px;
   margin-top:110px;
-  margin-left: 104px;
+  margin-left: 124px;
   background-color: white;
   text-align: center;
   font-size: 40px;
-  border-radius: 20px;
   color:#e6e6e6;
   box-shadow: 0px 30px 10px -10px #999999;
   font-family: impact;
@@ -1097,14 +1087,13 @@ border-radius: 20px;}
   position: absolute;
 }
 .menu2{
-  width:250px;
+  width:320px;
   height:80px;
   color:#e6e6e6;
   margin-top: 210px;
-  margin-left: 104px;
+  margin-left: 124px;
   font-family: impact;
   font-size: 40px;
-  border-radius: 20px;
   background-color: white;
      text-align: center;
      box-shadow: 0px 30px 10px -10px #999999;
@@ -1114,16 +1103,15 @@ border-radius: 20px;}
   position: absolute;
 }
 .menu3{
-  width:250px;
+  width:320px;
   height:80px;
   color:#e6e6e6;
   font-size: 40px;
   margin-top: 310px;
-  margin-left: 104px;
+  margin-left: 124px;
   font-family: impact;
   font-weight: 900;
   line-height: 200%;
-  border-radius: 20px;
     cursor: pointer;
     position: absolute;
   background-color: white;
@@ -1300,14 +1288,14 @@ article,aside,details,figcaption,figure,footer,header,hgroup,main,nav,section,su
 
  /*addgoal.html  目標を追加する前のページ*/
 
-header{
-width:1366px;
+.header{
 height: 60px;
 background-color:white;
 font-size: 50px;
  font-family: impact;
 color:#e5e5e5;
 text-align: center;
+margin:0 auto;
 }
 .col-md-9{
   background-color:#e6e6e6;
@@ -1363,8 +1351,8 @@ text-align: center;
   display: inline-block;
   padding: 0;
   margin-right: 5px;
-  width:150px;
-  height:150px;
+  width:200px;
+  height:200px;
   border-radius: 20px;
   background-color:white;
   border:1px solid;
@@ -1458,7 +1446,6 @@ border-radius: 20px;
   margin-left: 64px;
   text-align: center;
   font-size: 40px;
-  border-radius: 20px;
   color:#e6e6e6;
   box-shadow: 0px 30px 10px -10px #999999;
   position: absolute;
@@ -1473,7 +1460,6 @@ border-radius: 20px;
   color:#e6e6e6;
   font-family: impact;
   font-size: 40px;
-  border-radius: 20px;
   margin-top: 210px;
   background-color: white;
    margin-left: 64px;
@@ -1492,7 +1478,6 @@ border-radius: 20px;
   font-family: impact;
   font-weight: 900;
   line-height: 200%;
-  border-radius: 20px;
   margin-top: 310px;
     cursor: pointer;
   background-color: white;
@@ -1509,7 +1494,6 @@ border-radius: 20px;
   margin-left: 104px;
   text-align: center;
   font-size: 40px;
-  border-radius: 20px;
   color:#e6e6e6;
   box-shadow: 0px 30px 10px -10px #999999;
   position: absolute;
@@ -1524,7 +1508,6 @@ border-radius: 20px;
   color:#e6e6e6;
   font-family: impact;
   font-size: 40px;
-  border-radius: 20px;
   margin-top: 210px;
   background-color: white;
    margin-left: 104px;
@@ -1543,7 +1526,6 @@ border-radius: 20px;
   font-family: impact;
   font-weight: 900;
   line-height: 200%;
-  border-radius: 20px;
   margin-top: 310px;
     cursor: pointer;
   background-color: white;
@@ -1560,7 +1542,6 @@ border-radius: 20px;
   margin-left: 104px;
   text-align: center;
   font-size: 40px;
-  border-radius: 20px;
   color:#e6e6e6;
   box-shadow: 0px 30px 10px -10px #999999;
   position: absolute;
@@ -1575,7 +1556,6 @@ border-radius: 20px;
   color:#e6e6e6;
   font-family: impact;
   font-size: 40px;
-  border-radius: 20px;
   margin-top: 210px;
   background-color: white;
    margin-left: 104px;
@@ -1594,7 +1574,6 @@ border-radius: 20px;
   margin-left: 104px;
   text-align: center;
   font-size: 40px;
-  border-radius: 20px;
   color:#e6e6e6;
   box-shadow: 0px 30px 10px -10px #999999;
   position: absolute;
@@ -1609,7 +1588,6 @@ border-radius: 20px;
   color:#e6e6e6;
   font-family: impact;
   font-size: 40px;
-  border-radius: 20px;
   margin-top: 210px;
   background-color: white;
    margin-left: 104px;
@@ -1628,7 +1606,6 @@ border-radius: 20px;
   margin-left: 64px;
   text-align: center;
   font-size: 40px;
-  border-radius: 20px;
   color:#e6e6e6;
   box-shadow: 0px 30px 10px -10px #999999;
   position: absolute;
@@ -1643,7 +1620,6 @@ border-radius: 20px;
   color:#e6e6e6;
   font-family: impact;
   font-size: 40px;
-  border-radius: 20px;
   margin-top: 210px;
   background-color: white;
    margin-left: 64px;
@@ -1662,7 +1638,6 @@ border-radius: 20px;
   font-family: impact;
   font-weight: 900;
   line-height: 200%;
-  border-radius: 20px;
   margin-top: 310px;
     cursor: pointer;
   background-color: white;
@@ -1676,84 +1651,7 @@ border-radius: 20px;
   width:350px;
   background-color: red;
 }
-.menu1:hover{
-  width:250px;
-  transition: 2px;
-  height:80px;
-  background-color:skyblue;
-}
-.menu2:hover{
-  width:250px;
-  transition: 2px;
-  height:80px;
-  background-color:tomato;
-}
-.menu3:hover{
-  width:250px;
-  transition: 2px;
-  height:80px;
-  background-color:yellow;
-}
-#menu1:hover{
-  width:250px;
-  transition: 2px;
-  height:80px;
-  background-color:skyblue;
-}
-#menu2:hover{
-  width:250px;
-  transition: 2px;
-  height:80px;
-  background-color:tomato;
-}
-#menu3:hover{
-  width:250px;
-  transition: 2px;
-  height:80px;
-  background-color:yellow;
-}
-#menu4:hover{
-  width:250px;
-  transition: 2px;
-  height:80px;
-  background-color:skyblue;
-}
-#menu5:hover{
-  width:250px;
-  transition: 2px;
-  height:80px;
-  background-color:tomato;
-}
-#menu6:hover{
-  width:250px;
-  transition: 2px;
-  height:80px;
-  background-color:yellow;
-}
-#menu7:hover{
-  width:250px;
-  transition: 2px;
-  height:80px;
-  background-color:skyblue;
-}
-#menu8:hover{
-  width:250px;
-  transition: 2px;
-  height:80px;
-  background-color:tomato;
-}
-#menu9:hover{
-  width:250px;
-  transition: 2px;
-  height:80px;
-  background-color:skyblue;
-}
-#menu10:hover{
-  width:250px;
-  transition: 2px;
-  height:80px;
-  background-color:tomato;
-}
+
 .login,.about,.producer,.signup{
   background:tomato;
   text-align:center;
@@ -1767,8 +1665,9 @@ border-radius: 20px;
   text-align:center;
   font-size:60px;
   height:100px;
-  color:white;
   font-family: impact;
+  color:white;
+  
 }
 .mozi{
   font-size:80px;
