@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170511030320) do
+ActiveRecord::Schema.define(version: 20170514174952) do
 
   create_table "main_objs", force: :cascade do |t|
     t.string   "title"
@@ -19,22 +19,27 @@ ActiveRecord::Schema.define(version: 20170511030320) do
     t.integer  "user_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.datetime "start"
   end
 
   create_table "sub_objs", force: :cascade do |t|
     t.string   "title"
     t.text     "text"
     t.datetime "limit"
-    t.integer  "main_obj_id"
-    t.datetime "created_at",  null: false
-    t.datetime "updated_at",  null: false
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.integer  "user_id"
+    t.datetime "start"
+    t.integer  "place_id"
   end
 
   create_table "users", force: :cascade do |t|
     t.string   "name"
     t.string   "mail"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
+    t.datetime "created_at",      null: false
+    t.datetime "updated_at",      null: false
+    t.string   "password"
+    t.string   "password_digest"
   end
 
 end

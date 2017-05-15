@@ -1,10 +1,12 @@
-<header >
+<div class="row">
+<header class="header col-xm-12 col-md-12 col-lg-12">
  MIRACOLO
 </header>
-
+</div>
 <h1>ユーザー編集</h1>
 
 <%= render 'form', user: @user %>
-
+<div class="field">
 <%= link_to 'Show', @user %> |
 <%= link_to 'Back', users_path %>
+</div>

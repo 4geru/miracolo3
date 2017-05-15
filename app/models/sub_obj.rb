@@ -1,3 +1,3 @@
 class SubObj < ApplicationRecord
-    belongs_to :main_obj
+    belongs_to :user
 end

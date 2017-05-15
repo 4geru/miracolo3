@@ -1,5 +1,14 @@
 class SubObjsController < ApplicationController
   before_action :set_sub_obj, only: [:show, :edit, :update, :destroy]
+  before_action :login
+  def login
+    if session[:user_id].blank?
+      redirect_to user_log_
+      #user = User.create
+      #session[:user_id] = user.id
+    end
+    @user_id = session[:user_id]
+  end
 
   # GET /sub_objs
   # GET /sub_objs.json
