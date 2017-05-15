@@ -1,7 +1,11 @@
-<h1>ログイン</h1>
+<header>
+  <%= link_to "MIRACOLO", root_path %>
+</header>
 
 <%= form_for(:user_log, url: login_path) do |f| %>
-
+  <div class="content">
+    <h1>ログイン</h1>
+    <div class="image"></div>
     <div>
       <p><%= f.label :mail, 'メールアドレス' %></p>
       <p><%= f.text_field :mail %></p>
@@ -10,7 +14,75 @@
       <p><%= f.label :password, 'パスワード' %></p>
       <p><%= f.password_field :password %></p>
     </div>
-  <%= f.submit 'ログインする' %>
-  <p>New user? <%= link_to "Sign up now!", new_user_path %></p>
-
+    <%= f.submit 'ログインする' %>
+  </div>
 <% end %>
+
+<div id="menu9"><%= link_to "Sign Up", new_user_path %></div>
+<div id="menu10"><%= link_to "Top", root_path %></div>
+
+<!-- 元のコード
+<!DOCTYPE html>
+<html>
+  <html lang="ja">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Bootstrap </title>
+    <link href="css/test1.css" rel="stylesheet">
+    <script src="js/miracolo.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    <script>
+      // 画面幅800px基準でzoomをセット
+      $("html").css("zoom", $(window).width() / 1366);
+      $(window).bind({
+        "resize load orientationchange" : function(event) {
+          var zoom = $(window).width() / 1366;
+          $("html").css("zoom", zoom);
+        }
+      });
+      $(function () {
+        // ページ遷移
+        $('#menu9').click(function() {
+          window.location.href = 'signup.html';
+          // target="_top"
+          // top.location.href = '/';
+        });
+      });
+      $(function () {
+        // ページ遷移
+        $('#menu10').click(function() {
+          window.location.href = 'top.html';
+          // target="_top"
+          // top.location.href = '/';
+        });
+      });
+    </script>
+  </head>
+
+  <body style="background-color:#e6e6e6">
+    <header>
+      MIRACOLO
+    </header>
+    
+    <div class="content">
+      <h1>Log In</h1>
+    <div class="image"></div>
+    <div class="field">
+      Email<br>
+      <textarea class="name" type="email"></textarea>
+    </div>
+    <div class="field">
+      Password<br>
+      <textarea class="name" type="password"></textarea>
+    </div>
+    <button class="button">登録</button>
+  </div>
+  <div class="sidebar">
+    <div id="menu9">Sign up</div>
+    <div id="menu10">Top</div>
+  </div>
+</body>
+</html>　~もうどこで閉じてるかわからん・・・~
+-->

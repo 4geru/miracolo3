@@ -1,8 +1,9 @@
 Rails.application.routes.draw do
-  get    'login'   => 'user_log#new'
-  post   'login'   => 'user_log#create'
+  get    '/login'   => 'user_log#new'
+  post   '/login'   => 'user_log#create'
+  delete '/logout' => 'user_log#destroy'
 
-  get 'site/top'
+  get '/site/top'
   root "site#top"
   resources :sub_objs
   resources :main_objs

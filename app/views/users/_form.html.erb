@@ -2,31 +2,60 @@
   <% if user.errors.any? %>
     <div id="error_explanation">
       <h2><%= pluralize(user.errors.count, "error") %> prohibited this user from being saved:</h2>
-
       <ul>
-      <% user.errors.full_messages.each do |message| %>
-        <li><%= message %></li>
-      <% end %>
+        <% user.errors.full_messages.each do |message| %>
+          <li><%= message %></li>
+        <% end %>
       </ul>
     </div>
   <% end %>
 
-  <div class="field">
-    <%= f.label :name %>
-    <%= f.text_field :name %>
-  </div>
-
-  <div class="field">
-    <%= f.label :mail %>
-    <%= f.text_field :mail %>
-  </div>
-
-  <div class="field">
-    <%= f.label :password %>
-    <%= f.password_field :password %>
-  </div>
-
-  <div class="actions">
-    <%= f.submit %>
+<!-- -->
+  <div class="content">
+    <div class="image"></div>
+    <div class="field">
+      <%= f.label :name, "ユーザー名" %>
+      <%= f.text_field :name %>
+    </div>
+    <div class="field">
+      <%= f.label :mail, "メールアドレス" %>
+      <%= f.text_field :mail %>
+    </div>
+    <div class="field">
+      <%= f.label :password, "パスワード" %>
+      <%= f.password_field :password %>
+    </div>
+    <!--ごめんチェックめんどいからそのうち実装するわ笑
+    <div class="field">
+      Password again<br>
+      <textarea class="name" type="passwerd"></textarea>
+    </div>-->
+    <div class="actions">
+      <%= f.submit "GO" %>
+    </div>
   </div>
 <% end %>
+
+<!-- 元のコード
+<div class="content">
+  <h1>User Registration</h1> ~ここは/users/new.htmlに移動~
+  <div class="image"></div>
+  <div class="field">
+    NAME<br>
+    <textarea class="name"></textarea>
+  </div>
+  <div class="field">
+    Email<br>
+    <textarea class="name" type="email"></textarea>
+  </div>
+  <div class="field">
+    Password<br>
+    <textarea class="name" type="password"></textarea>
+  </div>
+  <div class="field">
+    Password again<br>
+    <textarea class="name" type="passwerd"></textarea>
+  </div>
+  <button class="button">登録</button>
+</div>
+-->

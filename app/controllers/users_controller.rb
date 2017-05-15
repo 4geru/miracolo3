@@ -24,12 +24,12 @@ class UsersController < ApplicationController
   # POST /users
   # POST /users.json
   def create
-    log_in @user
     @user = User.new(user_params)
+    log_in @user
 
     respond_to do |format|
       if @user.save
-        format.html { redirect_to @user, notice: 'User was successfully created.' }
+        format.html { redirect_to new_main_obj_path, notice: 'User was successfully created.' }
         format.json { render :show, status: :created, location: @user }
       else
         format.html { render :new }
@@ -43,8 +43,8 @@ class UsersController < ApplicationController
   def update
     respond_to do |format|
       if @user.update(user_params)
-        format.html { redirect_to @user, notice: 'User was successfully updated.' }
-        format.json { render :show, status: :ok, location: @user }
+        format.html { redirect_to main_obj_path(id: current_user.main_objs.ids), notice: 'User was successfully updated.' }
+        format.json { render template: "/main_objs/current_user" }
       else
         format.html { render :edit }
         format.json { render json: @user.errors, status: :unprocessable_entity }

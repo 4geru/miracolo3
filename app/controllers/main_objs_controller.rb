@@ -3,7 +3,7 @@ class MainObjsController < ApplicationController
   before_action :login
   def login
     if session[:user_id].blank?
-      redirect_to user_log_
+      redirect_to login_path
       #user = User.create
       #session[:user_id] = user.id
     end

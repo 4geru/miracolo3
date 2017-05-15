@@ -33,14 +33,14 @@ class SubObjsController < ApplicationController
   # POST /sub_objs
   # POST /sub_objs.json
   def create
-    @sub_obj = SubObj.new(sub_obj_params)
+    @sub_obj = current_user.sub_objs.new(sub_obj_params)
 
     respond_to do |format|
       if @sub_obj.save
-        format.html { redirect_to @sub_obj, notice: 'Sub obj was successfully created.' }
-        format.json { render :show, status: :created, location: @sub_obj }
+        format.html { redirect_to main_obj_path(id: current_user.main_objs.ids), notice: 'Sub obj was successfully created.' }
+        format.json { render template: "/main_objs/current_user" }
       else
-        format.html { render :new }
+        format.html { render template: "/main_objs/new" }
         format.json { render json: @sub_obj.errors, status: :unprocessable_entity }
       end
     end
@@ -51,8 +51,8 @@ class SubObjsController < ApplicationController
   def update
     respond_to do |format|
       if @sub_obj.update(sub_obj_params)
-        format.html { redirect_to @sub_obj, notice: 'Sub obj was successfully updated.' }
-        format.json { render :show, status: :ok, location: @sub_obj }
+        format.html { redirect_to @main_obj, notice: 'Sub obj was successfully updated.' }
+        format.json { render :show, status: :ok, location: @main_obj }
       else
         format.html { render :edit }
         format.json { render json: @sub_obj.errors, status: :unprocessable_entity }

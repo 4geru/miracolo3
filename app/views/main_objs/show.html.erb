@@ -5,51 +5,56 @@
 </header>
 </div>
 <div class="sidebar2">
-	<div class="time"></div>
-<div class="line"></div>
+  <div class="time"></div>
+  <div class="line"></div>
 </div>
-<div class="content">
-<div class="a"  ></div>
-<div class="b"  ></div>
-<div class="c"  ></div>
-<div class="d"  ></div>
-<div class="e"  id="trigger-overlay" type="button">
-  <br>
-  <p class="e-1"><%= @main_obj.title %></p>
-</div>
-<div class="f"  ></div>
-<div class="g"  ></div>
-<div class="h"  ></div>
-<div class="i"  ></div>
+  <div class="content">
+  <div class="a"  ></div>
+  <div class="b"  ></div>
+  <div class="c"  ></div>
+  <div class="d"  ></div>
+  <div class="e"  id="trigger-overlay" type="button"><br>
+    <p class="e-1"><%= @main_obj.title %></p>
+  </div>
+  <div class="f"  ></div>
+  <div class="g"  ></div>
+  <div class="h"  ></div>
+  <div class="i"  ></div>
 </div>
 <div class="sidebar">
- <div class="menu1"><%= link_to 'Edit', edit_main_obj_path(@main_obj) %></div>
-    <div class="menu2">User</div>
-     <div class="menu3">Log out</div>
+  <div class="menu1"><%= link_to 'Edit', edit_main_obj_path(@main_obj) %></div>
+  <div class="menu2"><%= link_to 'User', edit_user_path %></div>
+  <div class="menu3"><%= link_to 'Log Out', logout_path, method: :delete %></div>
 </div>
 <div class="overlay overlay-door way" style="background: #cccccc;">
-			<button type="button" class="overlay-close">Close</button>
+  <button type="button" class="overlay-close">Close</button>
+  <nav>
+    <ul>
+			<li>
+        <p href="#" id="yume">
+          <strong>Title:</strong>
+          <%= @main_obj.title %>
+        </p>
+      </li>
+			<li>
+        <a href="#" class="detail">
+          <strong>Text:</strong>
+          <%= @main_obj.text %>
+        </a>
+      </li>
+			<li>
+        <p href="#" class="detail">
+          <strong>Limit:</strong>
+          <%= @main_obj.limit %>
+        </p>
+      </li>
+		</ul>
+	</nav>
+</div>
 
-			<nav>
-				<ul>
-					<li><p href="#" id="yume">
-            <strong>Title:</strong>
-            <%= @main_obj.title %>
-          </p></li>
-					<li><a href="#" class="detail">
-              <strong>Text:</strong>
-              <%= @main_obj.text %>
-          </a></li>
-					<li><p href="#" class="detail">
-            <strong>Limit:</strong>
-            <%= @main_obj.limit %>
-          </p></li>
-				</ul>
-			</nav>
-		</div>
-		<script src="js/classie.js"></script>
-		<script src="js/demo1.js"></script>
-		</body>
+<script src="js/classie.js"></script>
+<script src="js/demo1.js"></script>
+</body>
 <!--
 
 <p id="notice"><%= notice %></p>

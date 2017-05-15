@@ -1,5 +1,73 @@
-<h1>New User</h1>
+<header>
+  <%= link_to "MIRACOLO", root_path %>
+</header>
+
+<h1>新規登録</h1>
 
 <%= render 'form', user: @user %>
 
-<%= link_to 'Back', users_path %>
+<div class="col-xs-3 col-md-3 col-lg-3">
+  <div id="menu11" class="col-xs-12 col-md-12 col-lg-12"><%= link_to "Top", root_path %></div>
+  <div id="menu12" class="col-xs-12 col-md-12 col-lg-12"><%= link_to "Log in", login_path %></div>
+</div>
+
+<!-- 元のコード
+<!DOCTYPE html>
+<html>
+<html lang="ja">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Bootstrap </title>
+  <link href="css/test1.css" rel="stylesheet">
+  <script src="js/miracolo.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+  <script>
+    // 画面幅800px基準でzoomをセット
+    $("html").css("zoom", $(window).width() / 1366);
+    $(window).bind({
+      "resize load orientationchange" : function(event) {
+        var zoom = $(window).width() / 1366;
+        $("html").css("zoom", zoom);
+      }
+    });
+    $(function () {
+      // ページ遷移
+      $('#menu7').click(function() {
+        window.location.href = 'login.html';
+        // target="_top"
+        // top.location.href = '/';
+      });
+    });
+    $(function () {
+      // ページ遷移
+      $('#menu8').click(function() {
+        window.location.href = 'top.html';
+        // target="_top"
+        // top.location.href = '/';
+      });
+    });
+  </script>
+</head>
+
+<body style="background-color:#e6e6e6">
+
+<header>
+  MIRACOLO
+</header>
+
+<div class="content">
+/users/_form.htmlにここがある
+</div>
+
+</div> ~これなに！？~
+
+<div class="sidebar"> ~ここもとじてない？~
+  <div id="menu7">Log in</div>
+  <div id="menu8">Top</div>
+
+</body>
+
+</html>
+-->

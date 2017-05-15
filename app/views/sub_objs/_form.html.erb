@@ -23,10 +23,14 @@
  
   <div class="field">
     <%= f.label :期限を決めましょう。 %>
+    <%= f.datetime_select :start %>〜
+  </div>
+
+   <div class="field">〜
     <%= f.datetime_select :limit %>
   </div>
-  
+
   <div class="actions">
-    <%= f.submit '登録'%>
+    <%= f.submit 'GO'%>
   </div>
 <% end %>
