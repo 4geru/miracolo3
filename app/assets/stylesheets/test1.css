@@ -1706,7 +1706,10 @@ margin-top:200px;
 }
 .about1,.about2,.about3,.about4{
   border-radius: 20px;
-  height:200px;
+  height:250px;
   background: white;
   margin-top:50px;
+}
+.logo{
+  
 }
