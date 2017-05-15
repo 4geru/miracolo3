@@ -1,3 +1,4 @@
+<!-- editもnewもこれを呼び出す。つまりgoal editの初回設定と変更のやつ -->
 <%= form_for(main_obj) do |f| %>
   <% if main_obj.errors.any? %>
     <div id="error_explanation">
@@ -11,7 +12,6 @@
     </div>
   <% end %>
 
-<!--ここから元のHTML-->
 <div class="col-xs-2 col-md-2 col-lg-2"></div>
 
 <div class="col-xs-7 col-md-7 col-lg-7" style="background-color: #e6e6e6;">
