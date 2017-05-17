@@ -1,9 +1,12 @@
 <!-- これもgoal editやけど、初回の時の　-->
 <%= link_to "MIRACOLO", root_path %>
 
-<h1 style="margin-left:50px;">New Dream</h1>
+<h1 style="margin-left:50px;">目標設定</h1>
 
 <%= render 'form', main_obj: @main_obj %>
-<div class="actions">
-<%= link_to 'Back', main_objs_path %>
+
+<div class="col-xs-3 col-md-3 col-lg-3">
+  <div id="menu11" class="col-xs-12 col-md-12 col-lg-12"><%= link_to "Top", root_path %></div>
+  <div id="menu12" class="col-xs-12 col-md-12 col-lg-12"><%= link_to 'User', edit_user_path(id: @current_user[id]) %></div>
+  <div id="menu13" class="col-xs-12 col-md-12 col-lg-12"><%= link_to 'Log Out', logout_path, method: :delete %></div>
 </div>

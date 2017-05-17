@@ -6,7 +6,12 @@ class UserLogController < ApplicationController
     user = User.find_by(mail: params[:user_log][:mail].downcase)
     if user && user.authenticate(params[:user_log][:password])
       log_in user
-      redirect_to main_obj_path(id: Main_obj.find_by(user_id: user.id).id), notice: 'ログインに成功しました'
+      current_user
+      if MainObj.find_by(user_id: @current_user.id )
+        redirect_to main_obj_path, notice: 'ログインに成功しました'
+      else
+        redirect_to new_main_obj_path, notice: 'ログインに成功しました'
+      end
     else
       render 'new', alert: 'ログインできませんでした'
     end

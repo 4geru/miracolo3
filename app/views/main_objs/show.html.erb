@@ -23,7 +23,7 @@
   <div class="i"  ></div>
 </div>
 <div class="sidebar">
-  <div class="menu1"><%= link_to 'Edit', edit_main_obj_path(@main_obj) %></div>
+  <div class="menu1"><%= link_to 'Edit', edit_main_obj_path(id: @main_obj.id %></div>
   <div class="menu2"><%= link_to 'User', edit_user_path %></div>
   <div class="menu3"><%= link_to 'Log Out', logout_path, method: :delete %></div>
 </div>
