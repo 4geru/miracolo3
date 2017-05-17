@@ -1,6 +1,7 @@
 class MainObjsController < ApplicationController
   before_action :set_main_obj, only: [:show, :edit, :update, :destroy]
-  before_action :login
+  before_action :logged_in?
+  
   def login
     if session[:user_id].blank?
       redirect_to login_path
