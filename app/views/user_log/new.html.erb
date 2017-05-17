@@ -1,13 +1,17 @@
 <!-- user_log関係ややこしいねんけど、要はuserの登録変更削除(sign up, edit, delete)をuserがやってて、
 user_logはログインログアウト(sigi in, sign out)を記録する役割。
 やからuser_logにはログイン画面用のビューだけ-->
-<header>
+<div class="row">
+<header class="header col-xm-12 col-md-12 col-lg-12">
   <%= link_to "MIRACOLO", root_path %>
 </header>
+</div>
 
 <%= form_for(:user_log, url: login_path) do |f| %>
-  <div class="content">
+  <div class="col-xm-12 col-md-12 col-lg-12">
     <h1>ログイン</h1>
+    </div>
+    <div class="col-xm-9 col-md-9 col-lg-9">
     <div class="image"></div>
     <div>
       <p><%= f.label :mail, 'メールアドレス' %></p>
@@ -19,11 +23,12 @@ user_logはログインログアウト(sigi in, sign out)を記録する役割�
     </div>
     <%= f.submit 'ログインする' %>
   </div>
+  </div>
 <% end %>
-
-<div id="menu9"><%= link_to "Sign Up", new_user_path %></div>
-<div id="menu10"><%= link_to "Top", root_path %></div>
-
+<div class="col-xm-3 col-md-3 col-lg-3">
+<div  id="menu3"class="col-xm-12 col-md-12 col-lg-12"><%= link_to "Sign Up", new_user_path %></div>
+<div id="menu4" class="col-xm-12 col-md-12 col-lg-12"><%= link_to "Top", root_path %></div>
+</div>
 <!-- 元のコード
 <!DOCTYPE html>
 <html>
