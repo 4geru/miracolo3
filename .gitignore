@@ -19,3 +19,9 @@
 
 # Ignore Byebug command history file.
 .byebug_history
+
+# Ignore chache files
+.DS_Store
+*.DS-Store
+*.keep
+vendor/bundle/
