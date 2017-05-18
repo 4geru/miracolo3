@@ -1402,21 +1402,15 @@ margin:0 auto;
   margin-top: 120px;
   margin-right: 30px;
 }
-.col-sm-3{
-  
-  background: #e6e6e6;
-  height:700px;
-  max-height: 800px;
-  position: absolute;
-
-}
 
 .field{
-height:80px;
- text-align: center;
- 
+  height:80px;
+  text-align: center;
 }
-
+.field2{
+  height:80px;
+text-align: center;
+}
 .actions{
   text-align: center;
 }
@@ -1434,8 +1428,23 @@ background:skyblue;
   width:120px;
   height: 120px;
 background:tomato;
-margin-left: 440px;
 border-radius: 20px;
+margin-bottom:50px;
+text-align: center;
+ margin-right: auto;
+ margin-left : auto; 
+ display:block;
+}
+.image2{
+  width:120px;
+  height: 120px;
+background:tomato;
+border-radius: 20px;
+margin-bottom:50px;
+text-align: center;
+ margin-right: auto;
+ margin-left : auto; 
+ display:block;
 }
 
 #menu1{
