@@ -43,7 +43,8 @@ class UsersController < ApplicationController
   def update
     respond_to do |format|
       if @user.update(user_params)
-        format.html { redirect_to main_obj_path(id: current_user.main_objs.ids), notice: 'User was successfully updated.' }
+        current_user
+        format.html { redirect_to main_obj_path(id: MainObj.find_by(user_id: @current_user.id).id), notice: 'User was successfully updated.' }
         format.json { render template: "/main_objs/current_user" }
       else
         format.html { render :edit }
